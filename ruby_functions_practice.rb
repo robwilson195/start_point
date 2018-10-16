@@ -1,4 +1,4 @@
-# require( 'Math' )
+include Math
 
 def return_10
   return 10
@@ -33,27 +33,13 @@ def add_string_as_number(string1, string2)
 end
 
 def number_to_full_month_name(num)
-  if num == 1
-    return "January"
-  elsif num == 3
-    return "March"
-  elsif num == 9
-    return "September"
-  else
-    return "none"
-  end
+  months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October","November", "December"]
+  return months[(num-1)]
 end
 
 def number_to_short_month_name(num)
-  if num == 1
-    return "Jan"
-  elsif num == 4
-    return "Apr"
-  elsif num == 10
-    return "Oct"
-  else
-    return "none"
-  end
+  months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct","Nov", "Dec"]
+  return months[(num-1)]
 end
 
 def volume_of_cube(length)
@@ -61,5 +47,9 @@ def volume_of_cube(length)
 end
 
 def volume_of_sphere(radius)
-  return 4.0/3.0*3.14*radius**3
+  return (4.0/3.0*PI*radius**3).round(5)
+end
+
+def fahrenheit_to_celsius(temp_in_f)
+  return (temp_in_f.to_f - 32).to_f * 5.0 / 9.0
 end

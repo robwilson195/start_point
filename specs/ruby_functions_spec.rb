@@ -1,7 +1,6 @@
 require( 'minitest/autorun' )
 require( 'minitest/rg' )
 require_relative( '../ruby_functions_practice' )
-# require( 'Math' )
 class FunctionsTest < MiniTest::Test
 
   # def test_return_10()
@@ -28,13 +27,13 @@ class FunctionsTest < MiniTest::Test
   #   divide_result = divide( 10, 2 )
   #   assert_equal( 5, divide_result )
   # end
-
+  #
   # def test_length_of_string()
   #   test_string = "A string of length 21"
   #   length_of_string = length_of_string( test_string )
   #   assert_equal( 21, length_of_string )
   # end
-
+  #
   # def test_join_string()
   #   string_1 = "Mary had a little lamb, "
   #   string_2 = "its fleece was white as snow"
@@ -61,23 +60,23 @@ class FunctionsTest < MiniTest::Test
   #   result = number_to_full_month_name( 9 )
   #   assert_equal( "September", result )
   # end
-
-  # def test_substring__month_1()
-  #   first_month_string = number_to_short_month_name( 1 )
-  #   assert_equal( "Jan", first_month_string )
-  # end
   #
-  # def test_substring__month_4()
-  #   fourth_month_string = number_to_short_month_name( 4 )
-  #   assert_equal( "Apr", fourth_month_string )
-  # end
-  #
-  # def test_substring__month_10()
-  #   tenth_month_string = number_to_short_month_name( 10 )
-  #   assert_equal( "Oct", tenth_month_string )
-  # end
+  def test_substring__month_1()
+    first_month_string = number_to_short_month_name( 1 )
+    assert_equal( "Jan", first_month_string )
+  end
 
-  #Further
+  def test_substring__month_4()
+    fourth_month_string = number_to_short_month_name( 4 )
+    assert_equal( "Apr", fourth_month_string )
+  end
+
+  def test_substring__month_10()
+    tenth_month_string = number_to_short_month_name( 10 )
+    assert_equal( "Oct", tenth_month_string )
+  end
+  #
+  # # Further
   #
   # #Given the length of a side of a cube calculate the volume
   # def test_volume_of_cube()
@@ -86,19 +85,22 @@ class FunctionsTest < MiniTest::Test
   #   assert_equal(expected, actual)
   #   #add test code here
   # end
-
-  #Given the radius of a sphere calculate the volume
-  def test_volume_of_sphere()
-    actual = volume_of_sphere(3)
-    expected = 113.03999999999999
-    assert_equal(expected, actual)
-    #add test code here
-  end
-
-  # #Given a value in farenheit, convert this into celsius.
-  # def test_fahrenheit_to_celsius()
+  #
+  # #Given the radius of a sphere calculate the volume
+  # def test_volume_of_sphere()
+  #   actual = volume_of_sphere(3)
+  #   expected = 113.09734
+  #   assert_equal(expected, actual)
   #   #add test code here
   # end
   #
+  # #Given a value in farenheit, convert this into celsius.
+  # def test_fahrenheit_to_celsius()
+  #   actual = fahrenheit_to_celsius(41)
+  #   expected = 5
+  #   assert_equal(expected, actual)
+  #   #add test code here
+  # end
+
 
 end
